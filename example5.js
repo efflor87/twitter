@@ -80,7 +80,55 @@ function handleTweets(tweets){
     }
     html += '</ul>';
     element.innerHTML = html;
-    document.write(html)
 }
 
 twitterFetcher.fetch(configProfile);
+
+const express = require('express');
+
+const requestSync = require('request-sync');
+
+const url = require('url');
+
+const JSDOM = require('jsdom').JSDOM;
+
+const app = express();
+
+
+app.get('/', (req, res) => {
+
+const URL = url.parse(req.url, true).query.url;
+
+let body = requestSync({
+
+method: 'GET',
+
+url: URL
+
+}).body;
+
+let dom = new JSDOM(body);
+
+let window = dom.window;
+
+let document = window.document;
+
+document.onload = function () {
+
+res.send(document.body.innerHTML);
+
+res.end();
+
+}
+
+});
+
+
+app.listen(3000, () => {
+
+console.log('server started');
+
+});
+
+
+
