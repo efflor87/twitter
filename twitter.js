@@ -78,7 +78,7 @@ function handleTweets(tweets){
     var element = document.getElementById('example5');
     var html = '<ul>';
     while(n < x) {
-      html += tweets[n] + '<br>';
+      html += '<li>' + tweets[n] + '</li>';
       n++;
     }
     html += '</ul>';
