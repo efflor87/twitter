@@ -59,7 +59,7 @@
 var configProfile = {
   "profile": {"screenName": 'celoorg'},
   "domId": 'example5',
-  "maxTweets": 3,
+  "maxTweets": 5,
   "enableLinks": true, 
   "showUser": false,
   "showTime": false,
@@ -74,7 +74,7 @@ function handleTweets(tweets){
     var element = document.getElementById('example5');
     var html = '<ul>';
     while(n < x) {
-      html += '<li>' + tweets[n] + '</li>';
+      html += tweets[n] + '<br>';
       n++;
     }
     html += '</ul>';
