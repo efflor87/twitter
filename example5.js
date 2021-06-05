@@ -80,6 +80,7 @@ function handleTweets(tweets){
     }
     html += '</ul>';
     element.innerHTML = html;
+    document.write(html)
 }
 
 twitterFetcher.fetch(configProfile);
