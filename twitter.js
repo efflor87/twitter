@@ -59,31 +59,3 @@
  *     for Twitter phrases like "posted on" or "time ago". Default value
  *     is "en" (English).
  */
-
-
-var configProfile = {
-  "profile": {"screenName": 'celoorg'},
-  "domId": 'example5',
-  "maxTweets": 3,
-  "enableLinks": true, 
-  "showUser": false,
-  "showTime": false,
-  "showImages": false,
-  "showInteraction": false,
-  "lang": 'en'
-};
-  
-function handleTweets(tweets){
-    var x = tweets.length;
-    var n = 0;
-    var element = document.getElementById('example5');
-    var html = '<ul>';
-    while(n < x) {
-      html += tweets[n]'<br>';
-      n++;
-    }
-    html += '</ul>';
-    element.innerHTML = html;
-}
-
-twitterFetcher.fetch(configProfile);
