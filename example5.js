@@ -65,6 +65,7 @@ var configProfile = {
   "showTime": false,
   "showImages": false,
   "showInteraction": false,
+  "customCallback": handleTweets,
   "lang": 'en'
 };
   
