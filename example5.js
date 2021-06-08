@@ -69,7 +69,7 @@ var configProfile = {
   "lang": 'kr'
 };
   
-function handleTweets(tweets){
+/* function handleTweets(tweets){
     var x = tweets.length;
     var n = 0;
     var element = document.getElementById('example5');
@@ -81,3 +81,4 @@ function handleTweets(tweets){
     html += '</ul>';
     element.innerHTML = html;
 }
+*/
