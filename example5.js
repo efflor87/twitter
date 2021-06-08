@@ -56,18 +56,8 @@
  *     for Twitter phrases like "posted on" or "time ago". Default value
  *     is "en" (English).
  */
-var configProfile = {
-  "profile": {"screenName": 'celoorg'},
-  "domId": 'example5',
-  "maxTweets": 15,
-  "enableLinks": true, 
-  "showUser": false,
-  "showTime": false,
-  "showImages": true,
-  "showInteraction": false,
-  "customCallback": handleTweets,
-  "lang": 'kr'
-};
+var configProfile = { "profile": {"screenName": 'jason_mayes'}, "domId": 'celoorg', "maxTweets": 15, "enableLinks": true, "showUser": true, "showTime": true, "showImages": true, "lang": 'en'};twitterFetcher.fetch(configProfile);
+
   
 /* function handleTweets(tweets){
     var x = tweets.length;
